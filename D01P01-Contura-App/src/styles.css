@@ -1,0 +1,35 @@
+header {
+    background-color: #007bff; /* Blue color */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px; /* Add margin between logo and buttons */
+  }
+  
+  nav ul li:first-child img {
+    height: 40px; /* Adjust height of the logo as needed */
+  }
+  
+  nav ul li a {
+    display: inline-block;
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .white-bg {
+    background-color: white; /* White background color for "Customers" button */
+    color: black; /* Black font color for "Customers" button */
+  }
+  
