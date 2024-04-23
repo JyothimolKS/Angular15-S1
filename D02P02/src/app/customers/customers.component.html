@@ -1,0 +1,11 @@
+<div class="customer" *ngFor="let customer of customersWithOrders() | slice:start:end">
+    <h2>{{customer.name}}</h2>
+    <p>{{customer.email}}</p>
+    <div class="order" *ngFor="let order of customer.orders">
+      <p>Order ID: {{order.id}}</p>
+      <p>Order Date: {{order.order_date}}</p>
+    </div>
+  </div>
+  
+  <!-- Pagination -->
+  <pagination [totalItems]="customersWithOrders().length" [itemsPerPage]="itemsPerPage" (pageChanged)="onPageChange($event)"></pagination>
