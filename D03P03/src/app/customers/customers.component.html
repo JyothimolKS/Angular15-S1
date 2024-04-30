@@ -1,0 +1,18 @@
+<div>
+    <input type="text" [(ngModel)]="searchText" placeholder="Search..." (input)="applyFilter()">
+  </div>
+  
+  <div class="customer-container">
+    <div class="card-view" *ngFor="let customer of filteredCustomers">
+      <!-- Card view layout -->
+    </div>
+    
+    <div class="list-view" *ngFor="let customer of filteredCustomers">
+      <!-- List view layout -->
+    </div>
+    
+    <div class="map-view">
+      <!-- Map view layout -->
+    </div>
+  </div>
+  
