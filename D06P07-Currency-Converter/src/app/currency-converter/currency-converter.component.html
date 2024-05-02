@@ -1,0 +1,13 @@
+<div>
+    <h2>Currency Converter</h2>
+    <input type="number" [(ngModel)]="usdAmount" placeholder="Enter amount in USD" />
+    <select [(ngModel)]="selectedCurrency">
+      <option value="INR">INR</option>
+      <option value="EUR">EUR</option>
+      <option value="JPY">JPY</option>
+      <!-- Add more currencies here -->
+    </select>
+    <button (click)="convert()">Convert</button>
+    <p *ngIf="convertedAmount">Converted Amount: {{ convertedAmount }}</p>
+  </div>
+  
