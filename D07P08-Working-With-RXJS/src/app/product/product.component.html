@@ -1,0 +1,72 @@
+<!-- product.component.html -->
+<div>
+    <h2>All Products</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Price</th>
+          <th>Discount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products$ | async">
+          <td>{{ product.name }}</td>
+          <td>{{ product.brand }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.discount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div>
+    <h2>Filtered Products</h2>
+    <button (click)="filterProducts()">Filter Products</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Price</th>
+          <th>Discount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filterProducts() | async">
+          <td>{{ product.name }}</td>
+          <td>{{ product.brand }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.discount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div>
+    <h2>Filter by Brand</h2>
+    <select (change)="filterByBrand($event.target.value)">
+      <option value="apple">Apple</option>
+      <!-- Add more brand options here -->
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Price</th>
+          <th>Discount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filterByBrand('apple') | async">
+          <td>{{ product.name }}</td>
+          <td>{{ product.brand }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.discount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
